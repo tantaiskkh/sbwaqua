@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBW.AQUA</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to top, #e6faff, #a1d9ed);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: #006064;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .main-logo {
+            width: 165px;
+            height: 165px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 150, 136, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-logo img {
+            width: 100%;
+            height: auto;
+            max-width: 130px;
+            max-height: 130px;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: #00796b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #00acc1;
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+
+        .link-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 150, 136, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #00acc1;
+            position: relative;
+            overflow: hidden;
+            display: block; /* เพิ่มเพื่อให้ลิงก์ครอบคลุมพื้นที่ทั้งหมด */
+            text-decoration: none; /* ลบการขีดเส้นใต้ของลิงก์ */
+            color: inherit; /* ให้สีตัวอักษรเหมือนเดิม */
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 150, 136, 0.3);
+        }
+
+        .link-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 65%, rgba(0, 188, 212, 0.1) 100%);
+            z-index: 0;
+        }
+
+        .platform-link {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 15px;
+            position: relative; /* เพิ่มเพื่อให้ z-index ทำงาน */
+            z-index: 1; /* ให้เนื้อหาอยู่เหนือพื้นหลัง */
+        }
+
+        .platform-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .platform-info {
+            flex: 1;
+        }
+
+        .platform-info h2 {
+            margin: 0;
+            color: #00838f;
+        }
+
+        .platform-info p {
+            margin: 5px 0 0 0;
+            color: #006064;
+            font-size: 0.9em;
+        }
+
+        .water-effect {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="#00bcd4" fill-opacity="0.8" d="M0,160L48,165.3C96,171,192,181,288,176C384,171,480,149,576,138.7C672,128,768,128,864,144C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .link-card {
+                padding: 12px;
+            }
+
+            .main-logo {
+                width: 100px;
+                height: 100px;
+                padding: 8px;
+            }
+
+            .main-logo img {
+                max-width: 90px;
+                max-height: 90px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="water-effect"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="main-logo">
+                <img src="S__5227039.jpg" alt="SBW.AQUA Logo">
+            </div>
+            <h1>SBW.AQUA</h1>
+            <p>🛥️“ 𝒜qua-𝒲orld “ everything can be 🎐🌎</p>
+        </div>
+        
+        <!-- การ์ดที่ 1 - แก้ไขแล้ว -->
+        <a href="https://www.instagram.com/sbw.aqua?igsh=MXdzajJmd3IxYzRldA%3D%3D&utm_source=qr" target="_blank" class="link-card">
+            <div class="platform-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Logo" class="platform-logo">
+                <div class="platform-info">
+                    <h2>INSTAGRAM</h2>
+                    
+                </div>
+            </div>
+        </a>
+
+        <!-- การ์ดที่ 2 - แก้ไขแล้ว -->
+        <a href="https://www.tiktok.com/@sbw.aqua?_t=ZS-8xNnrVbf34R&_r=1" target="_blank" class="link-card">
+            <div class="platform-link">
+                <img src="tiktok-logo.png" alt="IG Logo" class="platform-logo">
+                <div class="platform-info">
+                    <h2>TIKTOK</h2>
+                    
+                </div>
+            </div>
+        </a>
+
+        <!-- การ์ดที่ 3 - แก้ไขแล้ว -->
+        <a href="https://line.me/R/ti/p/@685gtiqk" target="_blank" class="link-card">
+            <div class="platform-link">
+                <img src="LINE_logo.svg.png" alt="Instagram Logo" class="platform-logo">
+                <div class="platform-info">
+                    <h2>LINE</h2>
+                    
+                </div>
+            </div>
+        </a>
+
+        
+    </div>
+</body>
+</html>
